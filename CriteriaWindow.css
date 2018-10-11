@@ -1,0 +1,158 @@
+body {
+  opacity: 100%;
+  margin-left: 0px;
+  background-color: #4c525b;
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  transition: transform 150ms ease-in-out;
+  width: auto;
+  margin:0 auto;
+}
+
+.calcList {
+  display: none;
+}
+
+#open {
+  font-size: 56px;
+  margin-left: 10px;
+}
+
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s; 
+}
+
+.sidenav #calcDrop {
+  padding: 8px 8px 0px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav #calcDrop:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .calcList a{
+  padding: 8px 8px 0px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  margin-left: 32px;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .calcList:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+.dropbtn {
+    background-color: #db4646;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 150px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0px;
+    z-index: 1;
+    width: 150px;
+}
+
+#check {
+  white-space: nowrap;
+}
+
+.dropdown-content .icriteria {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    left-margin: 6px;
+}
+
+.dropdown-content .tcriteria {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    left-margin: 6px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #e62020;
+}
+
+#light:hover{background-color: #f1f1f1}
+#medium:hover{background-color: #f1f1f1}
+#high:hover{background-color: #f1f1f1}
+#fifmin:hover{background-color: #f1f1f1}
+#thimin:hover{background-color: #f1f1f1}
+#formin:hover{background-color: #f1f1f1}
+#sixmin:hover{background-color: #f1f1f1}
+#other:hover{background-color: #f1f1f1}

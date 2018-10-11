@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <title>Button Function</title>
+    <script type="text/javascript" src="UIlogic.js"></script>
+    <link rel="stylesheet" href="css/HomeScreen.css" type="text/css" media="screen">
+  </head>
+  <body>
+    <span id="open" onclick="openNav()">≡</span>
+    </br>
+    <h id="instruction1">Select what you want to work out.</h>
+    </br>
+    <div class="container" id="cont">
+      <img id="background" src="human-body-muscles-silhouette-all-isolated-white-81974027.jpg?noresize">
+      <img id="mike" src="mike.jpg">
+      
+      <button class="dTrapBtn" name="Trapezius" id="traps">Trapezius</button>
+        <span class="dot" id="rTrap"></span>
+        <span class="dot" id="lTrap"></span>
+        <span class="dot" id="rTrapBack"></span>
+        <span class="dot" id="lTrapBack"></span>
+
+      <button class="dDeltBtn" name="Deltoids" id="rDeltoid">Deltoids</button>
+        <span class="dot" id="rDelBack"></span>
+        <span class="dot" id="lDelBack"></span>
+        <span class="dot" id="rDel"></span>
+        <span class="dot" id="lDel"></span>
+
+      <button class="dBicBtn" name="Biceps" id="bicep">Biceps</button>
+        <span class="dot" id="rBicep"></span>
+        <span class="dot" id="lBicep"></span>
+
+      <button class="dFlexBtn" name="Flexors" id="flexor">Flexors</button>
+        <span class="dot" id="rFlex"></span>
+        <span class="dot" id="lFlex"></span>
+
+      <button class="dOblBtn" name="Obliques" id="obliques">Obliques</button>
+        <span class="dot" id="rOblique"></span>
+        <span class="dot" id="lOblique"></span>
+
+      <button class="dQuadBtn" name="Quads" id="quad">Quads</button>
+        <span class="dot" id="rQuad"></span>
+        <span class="dot" id="lQuad"></span>
+
+      <button class="btn" name="Adductors" id="adductors">Adductors</button>
+        <span class="dot" id="rAdd"></span>
+        <span class="dot" id="lAdd"></span>
+
+
+      <button class="dTibBtn" name="Tibs" id="tib">Tibialis</button>
+        <span class="dot" id="rTib"></span>
+        <span class="dot" id="lTib"></span>
+
+      <button name="Triceps" id="tricep">Triceps</button>
+        <span class="dot" id="rTri"></span>
+        <span class="dot" id="lTri"></span>
+
+      <button class="btn" name="Pectoralis" id="pectoralis">Pectoralis</button>
+        <div id="pecDescription">
+          <a>Pec</a>
+        </div>
+
+      <button class="btn" name="Abdominals" id="abs">Abs</button>
+
+      <button onclick="window.location.href='CriteriaWindow.html'" class="nextBtn" id="next">Next</button> 
+
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="HomeScreen.html">Home</a>
+      <a>Login</a>
+      <a>Logout</a>
+      <a id="calcDrop">Calculators</a>
+        <div class="calcList">
+          <a>BMI</a>
+          <a>Max Reps</a>
+        </div>
+      <a>Test</a>
+    </div>
+    
+  </body>
+</html>
