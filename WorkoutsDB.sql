@@ -1,7 +1,7 @@
-CREATE DATABASE workouts;
-CREATE TABLE allWorkouts {
-	name TEXT;
-	length INTEGER;
-	musclesWorked TEXT;
-}
-INSERT INTO allWorkouts(name, length, musclesWorked) VALUES ('Bench Press', 5, 'Pectoralis, Triceps');
+CREATE TABLE allWorkouts (
+	Name text,
+	Length int,
+	MusclesWorked text
+);
+INSERT INTO allWorkouts(Name, Length, MusclesWorked) VALUES ('Bench Press',5,'Pectoralis');
+SELECT * FROM allWorkouts;
