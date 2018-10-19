@@ -1,6 +1,7 @@
 <html lang="en">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <title>Button Function</title>
     <script type="text/javascript" src="UIlogic.js"></script>
     <link rel="stylesheet" href="css/HomeScreen.css" type="text/css" media="screen">
@@ -10,62 +11,165 @@
     </br>
     <h id="instruction1">Select what you want to work out.</h>
     </br>
+    <hr id="border">
+
+    <div id="fixedBorderRight"></div>
+
     <div class="container" id="cont">
       <img id="background" src="human-body-muscles-silhouette-all-isolated-white-81974027.jpg?noresize">
       <img id="mike" src="mike.jpg">
-      
-      <button class="dTrapBtn" name="Trapezius" id="traps">Trapezius</button>
+
+      <button name="Trapezius" id="traps">Trapezius</button>
         <span class="dot" id="rTrap"></span>
         <span class="dot" id="lTrap"></span>
         <span class="dot" id="rTrapBack"></span>
         <span class="dot" id="lTrapBack"></span>
+        <div class="Description" id="trapDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
 
-      <button class="dDeltBtn" name="Deltoids" id="rDeltoid">Deltoids</button>
+        </div>
+
+      <button name="Deltoids" id="rDeltoid">Deltoids</button>
         <span class="dot" id="rDelBack"></span>
         <span class="dot" id="lDelBack"></span>
         <span class="dot" id="rDel"></span>
         <span class="dot" id="lDel"></span>
+        <div class="Description" id="delDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
 
-      <button class="dBicBtn" name="Biceps" id="bicep">Biceps</button>
+        </div>
+
+      <button name="Biceps" id="bicep">Biceps</button>
         <span class="dot" id="rBicep"></span>
         <span class="dot" id="lBicep"></span>
+        <div class="Description" id="bicepDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
 
-      <button class="dFlexBtn" name="Flexors" id="flexor">Flexors</button>
+        </div>
+
+      <button name="Flexors" id="flexor">Flexors</button>
         <span class="dot" id="rFlex"></span>
         <span class="dot" id="lFlex"></span>
+        <div class="Description" id="flexDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
 
-      <button class="dOblBtn" name="Obliques" id="obliques">Obliques</button>
+        </div>
+
+      <button name="Obliques" id="obliques">Obliques</button>
         <span class="dot" id="rOblique"></span>
         <span class="dot" id="lOblique"></span>
+        <div class="Description" id="oblDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
 
-      <button class="dQuadBtn" name="Quads" id="quad">Quads</button>
+        </div>
+
+      <button name="Quadriceps" id="quad">Quads</button>
         <span class="dot" id="rQuad"></span>
         <span class="dot" id="lQuad"></span>
+        <div class="Description" id="quadDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
 
-      <button class="btn" name="Adductors" id="adductors">Adductors</button>
+        </div>
+
+      <button name="Adductors" id="adductors">Adductors</button>
         <span class="dot" id="rAdd"></span>
         <span class="dot" id="lAdd"></span>
+        <div class="Description" id="addDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
+
+        </div>
 
 
-      <button class="dTibBtn" name="Tibs" id="tib">Tibialis</button>
+      <button name="Tibialis" id="tib">Tibialis</button>
         <span class="dot" id="rTib"></span>
         <span class="dot" id="lTib"></span>
+        <div class="Description" id="tibDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
+
+        </div>
 
       <button name="Triceps" id="tricep">Triceps</button>
         <span class="dot" id="rTri"></span>
         <span class="dot" id="lTri"></span>
-
-      <button class="btn" name="Pectoralis" id="pectoralis">Pectoralis</button>
-        <div id="pecDescription">
+        <div class="Description" id="triDescription">
+          <hr id="desBorderTop">
           <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
         </div>
 
-      <button class="btn" name="Abdominals" id="abs">Abs</button>
+      <button name="Latissimus" id="lats">Lats</button>
+        <span class="dot" id="rLat"></span>
+        <span class="dot" id="lLat"></span>
+        <div class="Description" id="latDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
+        </div>
+
+      <button name="Gluteus" id="glutes">Glutes</button>
+        <span class="dot" id="rGlu"></span>
+        <span class="dot" id="lGlu"></span>
+        <div class="Description" id="gluDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
+        </div>
+
+      <button name="Hamstrings" id="hams">Hammys</button>
+        <span class="dot" id="rHam"></span>
+        <span class="dot" id="lHam"></span>
+        <div class="Description" id="hamDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
+        </div>
+
+      <button name="Gastrocnemius" id="calves">Calves</button>
+        <span class="dot" id="rCaf"></span>
+        <span class="dot" id="lCaf"></span>
+        <div class="Description" id="cafDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
+        </div>
+
+      <button name="Pectoralis" id="pectoralis">Pectoralis</button>
+        <div class="Description" id="pecDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
+
+        </div>
+
+      <button name="Abdominals" id="abs">Abs</button>
+        <div class="Description" id="absDescription">
+          <hr id="desBorderTop">
+          <a>Pec</a>
+          <hr id="desBorderBot"><div id="rightBorder"></div>
+
+        </div>
 
       <button onclick="window.location.href='CriteriaWindow.html'" class="nextBtn" id="next">Next</button> 
 
     </div>
-
+    <hr id="border">
+    <a id="muscleNames"></a>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="HomeScreen.html">Home</a>

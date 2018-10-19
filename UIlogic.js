@@ -1,18 +1,35 @@
 var muscleArr = [];
 
-      $(document).ready(function() {
-        var isGreenDelt = false;
-        var isGreenTrap = false;
-        var isGreenBicep = false;
-        var isGreenFlex = false;
-        var isGreenObliques = false;
-        var isGreenQuad = false;
-        var isGreenAdd = false;
-        var isGreenTib = false;
-        var isGreenPec = false;
-        var isGreenAbs = false;
-        $("#rDeltoid").on({
+function removeA(arr){
+  var what, a= arguments, L= a.length, ax;
+  while(L> 1 && arr.length){
+    what= a[--L];
+    while((ax= arr.indexOf(what))!= -1){
+      arr.splice(ax, 1);
+    }
+  }
+  return arr;
+}
+
+$(document).ready(function() {
+  var isGreenDelt = false;
+  var isGreenTrap = false;
+  var isGreenBicep = false;
+  var isGreenFlex = false;
+  var isGreenObliques = false;
+  var isGreenQuad = false;
+  var isGreenAdd = false;
+  var isGreenTib = false;
+  var isGreenPec = false;
+  var isGreenAbs = false;
+  var isGreenTri = false;
+  var isGreenLat = false;
+  var isGreenGlu = false;
+  var isGreenHam = false;
+  var isGreenCaf = false;
+  $("#rDeltoid").on({
           mouseover: function() {
+            $(".Description").stop(true,true);
             if (isGreenDelt) {
               $("#rDeltoid").css("background-color", "#1eb81e");
               $("#rDel").css("background-color", "#1eb81e");
@@ -27,6 +44,7 @@ var muscleArr = [];
               $("#rDelBack").css("background-color", "#e62020");
               $("#lDelBack").css("background-color", "#e62020");
             }
+            $('#delDescription').toggle('slide', 25);
           },
 
           mouseout: function() {
@@ -44,6 +62,7 @@ var muscleArr = [];
               $("#rDelBack").css("background-color", "#db4646");
               $("#lDelBack").css("background-color", "#db4646");
             }
+            $('#delDescription').toggle('slide', 25);
           },
 
           click: function() {
@@ -58,7 +77,10 @@ var muscleArr = [];
             $("#rDelBack").css("border", "2px solid #1eb81e")
             $("#lDelBack").css("border", "2px solid #1eb81e")
             isGreenDelt = true;
-            muscleArr.push(this.name);
+            if (muscleArr.indexOf(this.name)==-1) {
+              muscleArr.push(this.name);
+            }
+            $("#muscleNames").html(muscleArr);
           },
 
           dblclick: function() {
@@ -73,12 +95,13 @@ var muscleArr = [];
             $("#rDelBack").css("border", "2px solid #ff2b2b")
             $("#lDelBack").css("border", "2px solid #ff2b2b")
             isGreenDelt = false;
-            muscleArr.splice(muscleArr.indexOf(this.name),1)
-          },
-        })
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
 
-        $("#traps").on({
+  $("#traps").on({
           mouseover: function() {
+            $(".Description").stop(true,true);
             if (isGreenTrap) {
               $("#traps").css("background-color", "#1eb81e");
               $("#rTrap").css("background-color", "#1eb81e");
@@ -93,6 +116,7 @@ var muscleArr = [];
               $("#rTrapBack").css("background-color", "#e62020");
               $("#lTrapBack").css("background-color", "#e62020");
             }
+            $('#trapDescription').toggle('slide', 25);
           },
 
           mouseout: function() {
@@ -110,6 +134,7 @@ var muscleArr = [];
               $("#rTrapBack").css("background-color", "#db4646");
               $("#lTrapBack").css("background-color", "#db4646");
             }
+            $('#trapDescription').toggle('slide', 25);
           },
 
           click: function() {
@@ -124,7 +149,10 @@ var muscleArr = [];
             $("#rTrap").css("border", "2px solid #1eb81e");
             $("#lTrap").css("border", "2px solid #1eb81e");
             isGreenTrap = true;
-            muscleArr.push(this.name);
+            if (muscleArr.indexOf(this.name)==-1) {
+              muscleArr.push(this.name);
+            }
+            $("#muscleNames").html(muscleArr);
           },
 
           dblclick: function() {
@@ -139,12 +167,13 @@ var muscleArr = [];
             $("#rTrap").css("border", "2px solid #ff2b2b");
             $("#lTrap").css("border", "2px solid #ff2b2b");
             isGreenTrap = false;
-            muscleArr.splice(muscleArr.indexOf(this.name),1)
-          },
-        })
+            removeA(muscleArr, this.name);
+            $("#muscleNames").html(muscleArr);
+          },})
 
-        $("#bicep").on({
+  $("#bicep").on({
           mouseover: function() {
+            $(".Description").stop(true,true);
             if (isGreenBicep) {
               $("#bicep").css("background-color", "#1eb81e");
               $("#lBicep").css("background-color", "#1eb81e");
@@ -155,6 +184,7 @@ var muscleArr = [];
               $("#lBicep").css("background-color", "#e62020");
               $("#rBicep").css("background-color", "#e62020");
             }
+            $('#bicepDescription').toggle('slide', 25);
           },
 
           mouseout: function() {
@@ -168,6 +198,7 @@ var muscleArr = [];
               $("#lBicep").css("background-color", "#db4646");
               $("#rBicep").css("background-color", "#db4646");
             }
+            $('#bicepDescription').toggle('slide', 25);
           },
 
           click: function() {
@@ -178,7 +209,10 @@ var muscleArr = [];
             $("#rBicep").css("border", "2px solid #1eb81e");
             $("#lBicep").css("border", "2px solid #1eb81e");
             isGreenBicep = true;
-            muscleArr.push(this.name);
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
           },
 
           dblclick: function() {
@@ -189,12 +223,13 @@ var muscleArr = [];
             $("#rBicep").css("border", "2px solid #ff2b2b");
             $("#lBicep").css("border", "2px solid #ff2b2b");
             isGreenBicep = false;
-            muscleArr.splice(muscleArr.indexOf(this.name),1)
-          },
-        })
+            removeA(muscleArr, this.name);
+            $("#muscleNames").html(muscleArr);
+          },})
 
-        $("#flexor").on({
+  $("#flexor").on({
           mouseover: function() {
+            $(".Description").stop(true,true);
             if (isGreenFlex) {
               $("#flexor").css("background-color", "#1eb81e");
               $("#rFlex").css("background-color", "#1eb81e");
@@ -205,6 +240,7 @@ var muscleArr = [];
               $("#rFlex").css("background-color", "#e62020");
               $("#lFlex").css("background-color", "#e62020");
             }
+            $('#flexDescription').toggle('slide', 25);
           },
 
           mouseout: function() {
@@ -218,6 +254,7 @@ var muscleArr = [];
               $("#rFlex").css("background-color", "#db4646");
               $("#lFlex").css("background-color", "#db4646");
             }
+            $('#flexDescription').toggle('slide', 25);
           },
 
           click: function() {
@@ -228,7 +265,10 @@ var muscleArr = [];
             $("#rFlex").css("border", "2px solid #1eb81e");
             $("#lFlex").css("border", "2px solid #1eb81e");
             isGreenFlex = true;
-            muscleArr.push(this.name);
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
           },
 
           dblclick: function() {
@@ -239,12 +279,13 @@ var muscleArr = [];
             $("#rFlex").css("border", "2px solid #ff2b2b");
             $("#lFlex").css("border", "2px solid #ff2b2b");
             isGreenFlex = false;
-            muscleArr.splice(muscleArr.indexOf(this.name),1)
-          },
-        })
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
 
-        $("#obliques").on({
+  $("#obliques").on({
           mouseover: function() {
+            $(".Description").stop(true,true);
             if (isGreenObliques) {
               $("#obliques").css("background-color", "#1eb81e");
               $("#rOblique").css("background-color", "#1eb81e");
@@ -255,6 +296,7 @@ var muscleArr = [];
               $("#rOblique").css("background-color", "#e62020");
               $("#lOblique").css("background-color", "#e62020");
             }
+            $('#oblDescription').toggle('slide', 25);
           },
 
           mouseout: function() {
@@ -268,6 +310,7 @@ var muscleArr = [];
               $("#rOblique").css("background-color", "#db4646");
               $("#lOblique").css("background-color", "#db4646");
             }
+            $('#oblDescription').toggle('slide', 25);
           },
 
           click: function() {
@@ -278,7 +321,10 @@ var muscleArr = [];
             $("#rOblique").css("border", "2px solid #1eb81e");
             $("#lOblique").css("border", "2px solid #1eb81e");
             isGreenObliques = true;
-            muscleArr.push(this.name);
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
           },
 
           dblclick: function() {
@@ -289,12 +335,13 @@ var muscleArr = [];
             $("#rOblique").css("border", "2px solid #ff2b2b");
             $("#lOblique").css("border", "2px solid #ff2b2b");
             isGreenObliques = false;
-            muscleArr.splice(muscleArr.indexOf(this.name),1)
-          },
-        })
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
 
-        $("#quad").on({
+  $("#quad").on({
           mouseover: function() {
+            $(".Description").stop(true,true);
             if (isGreenQuad) {
               $("#quad").css("background-color", "#1eb81e");
               $("#lQuad").css("background-color", "#1eb81e");
@@ -305,6 +352,7 @@ var muscleArr = [];
               $("#lQuad").css("background-color", "#e62020");
               $("#rQuad").css("background-color", "#e62020");
             }
+            $('#quadDescription').toggle('slide', 25);
           },
 
           mouseout: function() {
@@ -318,6 +366,7 @@ var muscleArr = [];
               $("#lQuad").css("background-color", "#db4646");
               $("#rQuad").css("background-color", "#db4646");
             }
+            $('#quadDescription').toggle('slide', 25);
           },
 
           click: function() {
@@ -328,7 +377,10 @@ var muscleArr = [];
             $("#rQuad").css("border", "2px solid #1eb81e");
             $("#lQuad").css("border", "2px solid #1eb81e");
             isGreenQuad = true;
-            muscleArr.push(this.name);
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
           },
 
           dblclick: function() {
@@ -339,12 +391,13 @@ var muscleArr = [];
             $("#rQuad").css("border", "2px solid #ff2b2b");
             $("#lQuad").css("border", "2px solid #ff2b2b");
             isGreenQuad = false;
-            muscleArr.splice(muscleArr.indexOf(this.name),1)
-          },
-        })
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
 
-        $("#adductors").on({
+  $("#adductors").on({
           mouseover: function() {
+            $(".Description").stop(true,true);
             if (isGreenAdd) {
               $("#adductors").css("background-color", "#1eb81e");
               $("#lAdd").css("background-color", "#1eb81e");
@@ -355,6 +408,7 @@ var muscleArr = [];
               $("#lAdd").css("background-color", "#e62020");
               $("#rAdd").css("background-color", "#e62020");
             }
+            $('#addDescription').toggle('slide', 25);
           },
 
           mouseout: function() {
@@ -368,6 +422,7 @@ var muscleArr = [];
               $("#lAdd").css("background-color", "#db4646");
               $("#rAdd").css("background-color", "#db4646");
             }
+            $('#addDescription').toggle('slide', 25);
           },
 
           click: function() {
@@ -378,7 +433,10 @@ var muscleArr = [];
             $("#rAdd").css("border", "2px solid #1eb81e");
             $("#lAdd").css("border", "2px solid #1eb81e");
             isGreenAdd = true;
-            muscleArr.push(this.name);
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
           },
 
           dblclick: function() {
@@ -389,12 +447,13 @@ var muscleArr = [];
             $("#rAdd").css("border", "2px solid #ff2b2b");
             $("#lAdd").css("border", "2px solid #ff2b2b");
             isGreenAdd= false;
-            muscleArr.splice(muscleArr.indexOf(this.name),1)
-          },
-        })
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
 
-        $("#tib").on({
+  $("#tib").on({
           mouseover: function() {
+            $(".Description").stop(true,true);
             if (isGreenTib) {
               $("#tib").css("background-color", "#1eb81e");
               $("#lTib").css("background-color", "#1eb81e");
@@ -405,6 +464,7 @@ var muscleArr = [];
               $("#lTib").css("background-color", "#e62020");
               $("#rTib").css("background-color", "#e62020");
             }
+            $('#tibDescription').toggle('slide', 25);
           },
 
           mouseout: function() {
@@ -418,6 +478,7 @@ var muscleArr = [];
               $("#lTib").css("background-color", "#db4646");
               $("#rTib").css("background-color", "#db4646");
             }
+            $('#tibDescription').toggle('slide', 25);
           },
 
           click: function() {
@@ -428,7 +489,10 @@ var muscleArr = [];
             $("#rTib").css("border", "2px solid #1eb81e");
             $("#lTib").css("border", "2px solid #1eb81e");
             isGreenTib = true;
-            muscleArr.push(this.name);
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
           },
 
           dblclick: function() {
@@ -439,19 +503,300 @@ var muscleArr = [];
             $("#rTib").css("border", "2px solid #ff2b2b");
             $("#lTib").css("border", "2px solid #ff2b2b");
             isGreenTib = false;
-            muscleArr.splice(muscleArr.indexOf(this.name),1)
-          },
-        })
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
 
-        $("#pectoralis").on({
+  $("#tricep").on({
           mouseover: function() {
+            $(".Description").stop(true,true);
+            if (isGreenTri) {
+              $("#tricep").css("background-color", "#1eb81e");
+              $("#lTri").css("background-color", "#1eb81e");
+              $("#rTri").css("background-color", "#1eb81e");
+            }
+            else {
+              $("#tricep").css("background-color", "#e62020");
+              $("#lTri").css("background-color", "#e62020");
+              $("#rTri").css("background-color", "#e62020");
+            }
+            $('#triDescription').toggle('slide', 25);
+          },
+
+          mouseout: function() {
+            if (isGreenTri) {
+              $("#tricep").css("background-color", "#27FE27");
+              $("#lTri").css("background-color", "#27FE27");
+              $("#rTri").css("background-color", "#27FE27");
+            }
+            else {
+              $("#tricep").css("background-color", "#db4646");
+              $("#lTri").css("background-color", "#db4646");
+              $("#rTri").css("background-color", "#db4646");
+            }
+            $('#triDescription').toggle('slide', 25);
+          },
+
+          click: function() {
+            $(this).css("background-color", "#27FE27")
+            $(this).css("border", "2px solid #1eb81e")
+            $("#rTri").css("background-color", "#27FE27");
+            $("#lTri").css("background-color", "#27FE27");
+            $("#rTri").css("border", "2px solid #1eb81e");
+            $("#lTri").css("border", "2px solid #1eb81e");
+            isGreenTri = true;
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
+          },
+
+          dblclick: function() {
+            $(this).css("background-color", "#db4646")
+            $(this).css("border", "2px solid #ff2b2b")
+            $("#rTri").css("background-color", "#db4646");
+            $("#lTri").css("background-color", "#db4646");
+            $("#rTri").css("border", "2px solid #ff2b2b");
+            $("#lTri").css("border", "2px solid #ff2b2b");
+            isGreenTri = false;
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
+
+  $("#lats").on({
+          mouseover: function() {
+            $(".Description").stop(true,true);
+            if (isGreenLat) {
+              $("#lats").css("background-color", "#1eb81e");
+              $("#lLat").css("background-color", "#1eb81e");
+              $("#rLat").css("background-color", "#1eb81e");
+            }
+            else {
+              $("#lats").css("background-color", "#e62020");
+              $("#lLat").css("background-color", "#e62020");
+              $("#rLat").css("background-color", "#e62020");
+            }
+            $('#latDescription').toggle('slide', 25);
+          },
+
+          mouseout: function() {
+            if (isGreenLat) {
+              $("#lats").css("background-color", "#27FE27");
+              $("#lLat").css("background-color", "#27FE27");
+              $("#rLat").css("background-color", "#27FE27");
+            }
+            else {
+              $("#lats").css("background-color", "#db4646");
+              $("#lLat").css("background-color", "#db4646");
+              $("#rLat").css("background-color", "#db4646");
+            }
+            $('#latDescription').toggle('slide', 25);
+          },
+
+          click: function() {
+            $(this).css("background-color", "#27FE27")
+            $(this).css("border", "2px solid #1eb81e")
+            $("#rLat").css("background-color", "#27FE27");
+            $("#lLat").css("background-color", "#27FE27");
+            $("#rLat").css("border", "2px solid #1eb81e");
+            $("#lLat").css("border", "2px solid #1eb81e");
+            isGreenLat = true;
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
+          },
+
+          dblclick: function() {
+            $(this).css("background-color", "#db4646")
+            $(this).css("border", "2px solid #ff2b2b")
+            $("#rLat").css("background-color", "#db4646");
+            $("#lLat").css("background-color", "#db4646");
+            $("#rLat").css("border", "2px solid #ff2b2b");
+            $("#lLat").css("border", "2px solid #ff2b2b");
+            isGreenLat = false;
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
+
+  $("#glutes").on({
+          mouseover: function() {
+            $(".Description").stop(true,true);
+            if (isGreenGlu) {
+              $("#glutes").css("background-color", "#1eb81e");
+              $("#lGlu").css("background-color", "#1eb81e");
+              $("#rGlu").css("background-color", "#1eb81e");
+            }
+            else {
+              $("#glutes").css("background-color", "#e62020");
+              $("#lGlu").css("background-color", "#e62020");
+              $("#rGlu").css("background-color", "#e62020");
+            }
+            $('#gluDescription').toggle('slide', 25);
+          },
+
+          mouseout: function() {
+            if (isGreenGlu) {
+              $("#glutes").css("background-color", "#27FE27");
+              $("#lGlu").css("background-color", "#27FE27");
+              $("#rGlu").css("background-color", "#27FE27");
+            }
+            else {
+              $("#glutes").css("background-color", "#db4646");
+              $("#lGlu").css("background-color", "#db4646");
+              $("#rGlu").css("background-color", "#db4646");
+            }
+            $('#gluDescription').toggle('slide', 25);
+          },
+
+          click: function() {
+            $(this).css("background-color", "#27FE27")
+            $(this).css("border", "2px solid #1eb81e")
+            $("#rGlu").css("background-color", "#27FE27");
+            $("#lGlu").css("background-color", "#27FE27");
+            $("#rGlu").css("border", "2px solid #1eb81e");
+            $("#lGlu").css("border", "2px solid #1eb81e");
+            isGreenGlu = true;
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
+          },
+
+          dblclick: function() {
+            $(this).css("background-color", "#db4646")
+            $(this).css("border", "2px solid #ff2b2b")
+            $("#rGlu").css("background-color", "#db4646");
+            $("#lGlu").css("background-color", "#db4646");
+            $("#rGlu").css("border", "2px solid #ff2b2b");
+            $("#lGlu").css("border", "2px solid #ff2b2b");
+            isGreenGlu = false;
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
+
+  $("#hams").on({
+          mouseover: function() {
+            $(".Description").stop(true,true);
+            if (isGreenHam) {
+              $("#hams").css("background-color", "#1eb81e");
+              $("#lHam").css("background-color", "#1eb81e");
+              $("#rHam").css("background-color", "#1eb81e");
+            }
+            else {
+              $("#hams").css("background-color", "#e62020");
+              $("#lHam").css("background-color", "#e62020");
+              $("#rHam").css("background-color", "#e62020");
+            }
+            $('#hamDescription').toggle('slide', 25);
+          },
+
+          mouseout: function() {
+            if (isGreenHam) {
+              $("#hams").css("background-color", "#27FE27");
+              $("#lHam").css("background-color", "#27FE27");
+              $("#rHam").css("background-color", "#27FE27");
+            }
+            else {
+              $("#hams").css("background-color", "#db4646");
+              $("#lHam").css("background-color", "#db4646");
+              $("#rHam").css("background-color", "#db4646");
+            }
+            $('#hamDescription').toggle('slide', 25);
+          },
+
+          click: function() {
+            $(this).css("background-color", "#27FE27")
+            $(this).css("border", "2px solid #1eb81e")
+            $("#rHam").css("background-color", "#27FE27");
+            $("#lHam").css("background-color", "#27FE27");
+            $("#rHam").css("border", "2px solid #1eb81e");
+            $("#lHam").css("border", "2px solid #1eb81e");
+            isGreenHam = true;
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
+          },
+
+          dblclick: function() {
+            $(this).css("background-color", "#db4646")
+            $(this).css("border", "2px solid #ff2b2b")
+            $("#rHam").css("background-color", "#db4646");
+            $("#lHam").css("background-color", "#db4646");
+            $("#rHam").css("border", "2px solid #ff2b2b");
+            $("#lHam").css("border", "2px solid #ff2b2b");
+            isGreenHam = false;
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
+
+  $("#calves").on({
+          mouseover: function() {
+            $(".Description").stop(true,true);
+            if (isGreenCaf) {
+              $("#calves").css("background-color", "#1eb81e");
+              $("#lCaf").css("background-color", "#1eb81e");
+              $("#rCaf").css("background-color", "#1eb81e");
+            }
+            else {
+              $("#calves").css("background-color", "#e62020");
+              $("#lCaf").css("background-color", "#e62020");
+              $("#rCaf").css("background-color", "#e62020");
+            }
+            $('#cafDescription').toggle('slide', 25);
+          },
+
+          mouseout: function() {
+            if (isGreenCaf) {
+              $("#calves").css("background-color", "#27FE27");
+              $("#lCaf").css("background-color", "#27FE27");
+              $("#rCaf").css("background-color", "#27FE27");
+            }
+            else {
+              $("#calves").css("background-color", "#db4646");
+              $("#lCaf").css("background-color", "#db4646");
+              $("#rCaf").css("background-color", "#db4646");
+            }
+            $('#cafDescription').toggle('slide', 25);
+          },
+
+          click: function() {
+            $(this).css("background-color", "#27FE27")
+            $(this).css("border", "2px solid #1eb81e")
+            $("#rCaf").css("background-color", "#27FE27");
+            $("#lCaf").css("background-color", "#27FE27");
+            $("#rCaf").css("border", "2px solid #1eb81e");
+            $("#lCaf").css("border", "2px solid #1eb81e");
+            isGreenCaf = true;
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
+          },
+
+          dblclick: function() {
+            $(this).css("background-color", "#db4646")
+            $(this).css("border", "2px solid #ff2b2b")
+            $("#rCaf").css("background-color", "#db4646");
+            $("#lCaf").css("background-color", "#db4646");
+            $("#rCaf").css("border", "2px solid #ff2b2b");
+            $("#lCaf").css("border", "2px solid #ff2b2b");
+            isGreenCaf = false;
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
+
+  $("#pectoralis").on({
+          mouseover: function() {
+            $(".Description").stop(true,true);
             if (isGreenPec) {
               $(this).css("background-color", "#1eb81e");
             }
             else {
               $(this).css("background-color", "#e62020");
             }
-            $("#pecDescription").toggle("slide");
+            $('#pecDescription').toggle('slide', 25); 
           },
 
           mouseout: function() {
@@ -461,32 +806,37 @@ var muscleArr = [];
             else {
               $(this).css("background-color", "#db4646");
             }
-            $("#pecDescription").toggle("slide");
+            $("#pecDescription").toggle("slide", 50);
           },
 
           click: function() {
             $(this).css("background-color", "#27FE27")
             $(this).css("border", "2px solid #1eb81e")
             isGreenPec = true;
-            muscleArr.push(this.name);
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
           },
 
           dblclick: function() {
             $(this).css("background-color", "#db4646")
             $(this).css("border", "2px solid #ff2b2b")
             isGreenPec = false;
-            muscleArr.splice(muscleArr.indexOf(this.name),1)
-          },
-        })
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
 
-        $("#abs").on({
+  $("#abs").on({
           mouseover: function() {
+            $(".Description").stop(true,true);
             if (isGreenAbs) {
               $(this).css("background-color", "#1eb81e");
             }
             else {
               $(this).css("background-color", "#e62020");
             }
+            $('#absDescription').toggle('slide', 25);
           },
 
           mouseout: function() {
@@ -496,36 +846,42 @@ var muscleArr = [];
             else {
               $(this).css("background-color", "#db4646");
             }
+            $('#absDescription').toggle('slide', 25);
           },
 
           click: function() {
             $(this).css("background-color", "#27FE27")
             $(this).css("border", "2px solid #1eb81e")
             isGreenAbs = true;
-            muscleArr.push(this.name);
+            if (muscleArr.indexOf(this.name)==-1) {
+  muscleArr.push(this.name);
+}
+            $("#muscleNames").html(muscleArr);
           },
 
           dblclick: function() {
             $(this).css("background-color", "#db4646")
             $(this).css("border", "2px solid #ff2b2b")
             isGreenAbs = false;
-            muscleArr.splice(muscleArr.indexOf(this.name),1)
-          },
-        })
+            removeA(muscleArr, this.name)
+            $("#muscleNames").html(muscleArr);
+          },})
 
-        $("#calcDrop").click(function() {
-            $(".calcList").slideToggle(300);
-        });
-      })
+  $("#calcDrop").click(function() {
+      $(".calcList").slideToggle(300);
+  });
+})
 
-     function openNav() {
+function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("fixedBorderRight").style.left = "1235px";
         document.body.style.marginLeft = "250px";
         document.body.style.opacity = "50%";
-      }
+}
 
-      function closeNav() {
+function closeNav() {
         document.getElementById("mySidenav").style.width = "0px";
+        document.getElementById("fixedBorderRight").style.left = "985px";
         document.body.style.marginLeft = "0px";
         document.body.style.opacity = "100%";
-      }
+}
