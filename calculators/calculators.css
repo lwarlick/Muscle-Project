@@ -1,5 +1,13 @@
 
 
+body {
+  opacity: 100%;
+  margin-left: 0px;
+  background-color: #4c525b;
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
 #ONERMbutton {
     background-color: #832B2B;
     -moz-border-radius: 5px;
