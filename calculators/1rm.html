@@ -1,50 +1,59 @@
-<!DOCTYPE html> <!-- ask if it wants to save the 1RM estimate, then warn it can only be saved once per day, then hide the option to save until 24hrs pass and save it to localstorage and display it in a chart below-->
+<!DOCTYPE html>
+<!-- ask if it wants to save the 1RM estimate, then warn it can only be saved once per day, then hide the option to save until 24hrs pass and save it to localstorage and display it in a chart below-->
 <html>
-  <head>
-    <meta charset="utf-8">
-		<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
-    <meta name="viewport" content="width=device-width">
-    <link href="calculators.css" rel="stylesheet" type="text/css">
-  </head>
 
-  
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+	<meta name="viewport" content="width=device-width">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+	<title>LIGMA</title>
+	<link href="calculators.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="HomeScreen.css">
+	<script src="UIlogic.js"></script>
+	<script src="script.js"></script>
+</head>
 
-	<p id="1RM">
-			<script src="script.js"></script>
-			
-			Metric:<br>
-			<label class="switch">
-  			<input type="checkbox" onclick="changeSystem();">
-  			<span class="slider round"></span>
-			</label>
 
-			<form id="1rmform" onsubmit="submit1RM();">
-  			Weight lifted:<br>
-  			<input type="text" name="1RMweight" autocomplete="off"><br><br>
-  			Repetitions: <br>
-  			<input type="text" name="reps" autocomplete="off"> 
-				<img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/light-bulb-icon.png" width="30" height="30"> <!--slide down-->
-				Tip! Input less than 10 reps for most accurate results. <br><br>
-  			<input type="submit" value="Calculate" id="calc0">
-			</form>
-	</p>
 
-	<div id="ONERMresult">
-		<script src="script.js"></script>
-		Your estimated max is: 
-		<script>
-		document.write(sessionStorage.getItem('maxresult')+" ");
+<p id="1RM">
+	<script src="script.js"></script>
+
+	Metric:<br>
+	<label class="switch">
+		<input type="checkbox" onclick="changeSystem();">
+		<span class="slider round"></span>
+	</label>
+
+	<form id="1rmform" onsubmit="submit1RM();">
+		Weight lifted:<br>
+		<input type="text" name="1RMweight" autocomplete="off"><br><br>
+		Repetitions: <br>
+		<input type="text" name="reps" autocomplete="off">
+		<img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/light-bulb-icon.png" width="30" height="30">
+		<!--slide down-->
+		Tip! Input less than 10 reps for most accurate results. <br><br>
+		<input type="submit" value="Calculate" id="calc0">
+	</form>
+</p>
+
+<div id="ONERMresult">
+	<script src="script.js"></script>
+	Your estimated max is:
+	<script>
+		document.write(sessionStorage.getItem('maxresult') + " ");
 		document.write(displayWeightUnit()); //might have var dumping probs
-		</script>
-	</div>
-	
-	<div id="mySidenav" class="sidenav">
-		<link rel="stylesheet" href="HomeScreen.css">
-		<script src="UIlogic.js"></script>
-		<a id="closebtn" onclick="closeNav()">&times;</a>
-		<a href="HomeScreen.html">Home</a>
-		<a style="color:white;" href="calculators/index.html">Calculators</a>
-	</div>
+	</script>
+</div>
+
+<div id="mySidenav" class="sidenav">
+	<link rel="stylesheet" href="HomeScreen.css">
+	<script src="UIlogic.js"></script>
+	<a id="closebtn" onclick="closeNav()">&times;</a>
+	<a href="HomeScreen.html">Home</a>
+	<a style="color:white;" href="calculators/index.html">Calculators</a>
+</div>
 
 
-</html> 
+</html>
