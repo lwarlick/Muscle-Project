@@ -46,42 +46,43 @@ div a {
 #rightBorder {
   position: relative;
   display: inline-block;
-  height: 960px;
+  height: 970px;
   width: 5px;
   margin: 0;
   border: 0;
   background-color: black;
-  left: 203px;
+  left: 463px;
   top: 0px;
+  margin-top: -5;
 }
 
 #border {
     width: 970px;
     height: 5px;
-    margin: 0 auto;
+    margin-top: -5;
     border: none;
     position: absolute;
     background-color: black;
-    z-index: 15;
+    z-index: 15;  
 }
 
 #fixedBorderRight {
     width: 5px;
-    height: 960px;
+    height: 965px;
     margin: 0 auto;
     border: none;
     position: absolute;
     left: 985px;
-    top: 135px;
+    top: 130px;
     background-color: black;
     z-index: 15;
     transition: 0.5s;
 }
 
 #desBorderTop {
-    width: 240px;
+    width: 500px;
     height: 5px;
-    margin: 0 auto;
+    margin-top: -5;
     border: none;
     position: absolute;
     background-color: black;
@@ -89,7 +90,7 @@ div a {
 }
 
 #desBorderBot {
-    width: 245px;
+    width: 500px;
     height: 5px;
     margin: 0 auto;
     border: none;
@@ -101,6 +102,10 @@ div a {
 
 #background {
   top: 39px;
+}
+
+.Description {
+  width: 500px;
 }
 
 #instruction1 {
@@ -146,7 +151,7 @@ img {
 
 #pecDescription {
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -173,7 +178,7 @@ img {
 #absDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -215,7 +220,7 @@ img {
 #delDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -312,7 +317,7 @@ img {
 #bicepDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -363,7 +368,7 @@ img {
 #flexDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -413,7 +418,7 @@ img {
 #oblDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -465,7 +470,7 @@ img {
 #trapDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -539,7 +544,7 @@ img {
 #quadDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -589,7 +594,7 @@ img {
 #addDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -639,7 +644,7 @@ img {
 #tibDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -689,7 +694,7 @@ img {
 #triDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -740,7 +745,7 @@ img {
 #latDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -791,7 +796,7 @@ img {
 #gluDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -842,7 +847,7 @@ img {
 #hamDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -893,7 +898,7 @@ img {
 #cafDescription {
   display: none;
   float: right;
-  width: 240px;
+  
   height: 960px;
   background-color: #a4abb5;
   z-index: 16;
@@ -1007,8 +1012,8 @@ img {
 #closebtn {
   position: absolute;
   top: 0px;
-  right: 55px;
-  font-size: 36px;
+  left: 125px;
+  font-size: 42px;
   margin-left: 50px;
 }
 
