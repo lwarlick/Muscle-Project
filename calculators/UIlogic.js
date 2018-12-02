@@ -47,7 +47,6 @@ $(document).ready(function() {
               $("#lDelBack").css("background-color", "#e62020");
             }
             
-            $('#delDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -66,7 +65,6 @@ $(document).ready(function() {
               $("#lDelBack").css("background-color", "#db4646");
             }
             
-            $('#delDescription').slideToggle(10);
           },
 
           click: function() {
@@ -120,7 +118,6 @@ $(document).ready(function() {
               $("#rTrapBack").css("background-color", "#e62020");
               $("#lTrapBack").css("background-color", "#e62020");
             }
-            $('#trapDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -138,7 +135,6 @@ $(document).ready(function() {
               $("#rTrapBack").css("background-color", "#db4646");
               $("#lTrapBack").css("background-color", "#db4646");
             }
-            $('#trapDescription').slideToggle(10);
           },
 
           click: function() {
@@ -189,7 +185,6 @@ $(document).ready(function() {
               $("#rBicep").css("background-color", "#e62020");
             }
             
-            $('#bicepDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -204,7 +199,6 @@ $(document).ready(function() {
               $("#rBicep").css("background-color", "#db4646");
             }
             
-            $('#bicepDescription').slideToggle(10);
           },
 
           click: function() {
@@ -247,7 +241,6 @@ $(document).ready(function() {
               $("#lFlex").css("background-color", "#e62020");
             }
             
-            $('#flexDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -262,7 +255,6 @@ $(document).ready(function() {
               $("#lFlex").css("background-color", "#db4646");
             }
             
-            $('#flexDescription').slideToggle(10);
           },
 
           click: function() {
@@ -305,7 +297,6 @@ $(document).ready(function() {
               $("#lOblique").css("background-color", "#e62020");
             }
             
-            $('#oblDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -320,7 +311,6 @@ $(document).ready(function() {
               $("#lOblique").css("background-color", "#db4646");
             }
             
-            $('#oblDescription').slideToggle(10);
           },
 
           click: function() {
@@ -363,7 +353,6 @@ $(document).ready(function() {
               $("#rQuad").css("background-color", "#e62020");
             }
             
-            $('#quadDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -378,7 +367,6 @@ $(document).ready(function() {
               $("#rQuad").css("background-color", "#db4646");
             }
             
-            $('#quadDescription').slideToggle(10);
           },
 
           click: function() {
@@ -421,7 +409,6 @@ $(document).ready(function() {
               $("#rAdd").css("background-color", "#e62020");
             }
             
-            $('#addDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -436,7 +423,6 @@ $(document).ready(function() {
               $("#rAdd").css("background-color", "#db4646");
             }
             
-            $('#addDescription').slideToggle(10);
           },
 
           click: function() {
@@ -479,7 +465,6 @@ $(document).ready(function() {
               $("#rTib").css("background-color", "#e62020");
             }
             
-            $('#tibDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -494,7 +479,6 @@ $(document).ready(function() {
               $("#rTib").css("background-color", "#db4646");
             }
             
-            $('#tibDescription').slideToggle(10);
           },
 
           click: function() {
@@ -537,7 +521,6 @@ $(document).ready(function() {
               $("#rTri").css("background-color", "#e62020");
             }
             
-            $('#triDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -552,7 +535,6 @@ $(document).ready(function() {
               $("#rTri").css("background-color", "#db4646");
             }
             
-            $('#triDescription').slideToggle(10);
           },
 
           click: function() {
@@ -595,7 +577,6 @@ $(document).ready(function() {
               $("#rLat").css("background-color", "#e62020");
             }
             
-            $('#latDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -610,7 +591,6 @@ $(document).ready(function() {
               $("#rLat").css("background-color", "#db4646");
             }
             
-            $('#latDescription').slideToggle(10);
           },
 
           click: function() {
@@ -653,7 +633,6 @@ $(document).ready(function() {
               $("#rGlu").css("background-color", "#e62020");
             }
             
-            $('#gluDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -668,7 +647,6 @@ $(document).ready(function() {
               $("#rGlu").css("background-color", "#db4646");
             }
             
-            $('#gluDescription').slideToggle(10);
           },
 
           click: function() {
@@ -711,7 +689,6 @@ $(document).ready(function() {
               $("#rHam").css("background-color", "#e62020");
             }
             
-            $('#hamDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -726,7 +703,6 @@ $(document).ready(function() {
               $("#rHam").css("background-color", "#db4646");
             }
             
-            $('#hamDescription').slideToggle(10);
           },
 
           click: function() {
@@ -769,7 +745,6 @@ $(document).ready(function() {
               $("#rCaf").css("background-color", "#e62020");
             }
 
-            $('#cafDescription').slideToggle(25);
           },
 
           mouseout: function() {
@@ -784,7 +759,6 @@ $(document).ready(function() {
               $("#rCaf").css("background-color", "#db4646");
             }
             
-            $('#cafDescription').slideToggle(10);
           },
 
           click: function() {
@@ -823,7 +797,6 @@ $(document).ready(function() {
               $(this).css("background-color", "#e62020");
             }
             
-            $('#pecDescription').slideToggle(10); 
           },
 
           mouseout: function() {
@@ -833,7 +806,6 @@ $(document).ready(function() {
             else {
               $(this).css("background-color", "#db4646");
             }
-            $("#pecDescription").toggle("slide", 50);
           },
 
           click: function() {
@@ -864,7 +836,6 @@ $(document).ready(function() {
               $(this).css("background-color", "#e62020");
             }
             
-            $('#absDescription').slideToggle(10);
           },
 
           mouseout: function() {
@@ -875,7 +846,6 @@ $(document).ready(function() {
               $(this).css("background-color", "#db4646");
             }
             
-            $('#absDescription').slideToggle(10);
           },
 
           click: function() {
@@ -913,17 +883,17 @@ $(document).ready(function() {
 });
 
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("fixedBorderRight").style.left = "1235px";
-  document.body.css('margin-left', '250px');
-  document.body.style.opacity = "50%";
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("fixedBorderRight").style.left = "1235px";
+        document.body.style.marginLeft = "250px";
+        document.body.style.opacity = "50%";
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0px";
-  document.getElementById("fixedBorderRight").style.left = "985px";
-  document.body.style.marginLeft = "0px";
-  document.body.style.opacity = "100%";
+        document.getElementById("mySidenav").style.width = "0px";
+        document.getElementById("fixedBorderRight").style.left = "985px";
+        document.body.style.marginLeft = "0px";
+        document.body.style.opacity = "100%";
 }
 
 var benchPress = {
@@ -1128,7 +1098,7 @@ var militaryPress = {
   name:"Military Press",
   intensity: "Medium",
   primaryMusclesWorked:["Deltoids"],
-  secondaryMusclesWorked:["Triceps", "Trapezius", "Abdominals", "Obliques"],
+  secondaryMusclesWorked:["Triceps", "Trapezius"],
   generateAptitude: function() {
     var primaryScore = 0;
     var secondaryScore = 0;
@@ -1545,6 +1515,7 @@ function buildWorkout() {
       liftNames.pop();
     }
   }
+  liftNames.reverse();
   return liftNames;
 }
 

@@ -8,6 +8,11 @@ body {
   padding: 20px;
 }
 
+#light {
+  width: 30px;
+  height: 30px;
+}
+
 #ONERMbutton {
     background-color: #832B2B;
     -moz-border-radius: 5px;
@@ -93,7 +98,6 @@ body {
     color: #832B2B;
     font-size: 42px;
     font-family: 'Racing Sans One';
-    visibility:hidden;
 }
 
 /* The switch - the box around the slider */
