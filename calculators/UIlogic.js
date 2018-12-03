@@ -884,14 +884,12 @@ $(document).ready(function() {
 
 function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("fixedBorderRight").style.left = "1235px";
         document.body.style.marginLeft = "250px";
         document.body.style.opacity = "50%";
 }
 
 function closeNav() {
         document.getElementById("mySidenav").style.width = "0px";
-        document.getElementById("fixedBorderRight").style.left = "985px";
         document.body.style.marginLeft = "0px";
         document.body.style.opacity = "100%";
 }
