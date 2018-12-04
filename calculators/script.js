@@ -1,6 +1,7 @@
 //add units to form that change based on slider use divs and change innerhtml in changesystem()
 //rounding error on 1rmcalc
 metric=false;
+sessionStorage.setItem('metric', metric);
 result=1;
 maxresult=1;
 
@@ -8,7 +9,10 @@ function changeSystem(){
 	if (metric==true)
 		metric=false;
 	else
+	{
 		metric=true;
+	}
+	sessionStorage.setItem('metric', metric);
 }
 
 function calculate1RM(bool) { //metric:true/false
