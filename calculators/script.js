@@ -94,16 +94,24 @@ function submitBMI() {
 	sessionStorage.setItem('result', result);
 }
 
+x=false;
+unit='error';
+
 function submit1RM() {
-	var x;
-	if (sessionStorage.getItem('metric')=="true")
+	if (sessionStorage.getItem('metric')==="true")
 		x = true;
 	else
 		x = false;
-	maxresult=calculate1RM(x);
+
+	if (x==true)
+		unit= "kilograms";
+	else
+		unit= "pounds";
+
+	maxresult=calculate1RM(x) + " " + unit;
+	sessionStorage.setItem('maxresult', maxresult);
 	hide("1RM");
 	show("ONERMresult");
-	//alert(typeof sessionStorage.getItem('metric')) //returns string
 }
 
 function show(id) {
@@ -114,18 +122,10 @@ function hide(id) {
 	document.getElementById(id).style.visibility='hidden';
 }
 
-function displayHeightUnit()
+function displayHeightUnit(x)
 {
-	if (sessionStorage.getItem('metric')=="true")
+	if (x==true)
 		return "meters";
 	else
 		return "inches";
-}
-
-function displayWeightUnit()
-{
-	if (sessionStorage.getItem('metric')=='true')
-		return "kilograms";
-	else
-		return "pounds";
 }
