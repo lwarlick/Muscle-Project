@@ -3,7 +3,7 @@
 body {
   opacity: 100%;
   margin-left: 0px;
-  background-color: #4c525b;
+  background-color: rgb(27, 0, 51);
   transition: margin-left .5s;
   padding: 20px;
 }

@@ -94,8 +94,21 @@ function submitBMI() {
 	sessionStorage.setItem('result', result);
 }
 
+x=false;
+unit='error';
+
 function submit1RM() {
-	maxresult=calculate1RM(metric);
+	if (sessionStorage.getItem('metric')==="true")
+		x = true;
+	else
+		x = false;
+
+	if (x==true)
+		unit= "kilograms";
+	else
+		unit= "pounds";
+
+	maxresult=calculate1RM(x) + " " + unit;
 	sessionStorage.setItem('maxresult', maxresult);
 	hide("1RM");
 	show("ONERMresult");
@@ -109,18 +122,10 @@ function hide(id) {
 	document.getElementById(id).style.visibility='hidden';
 }
 
-function displayHeightUnit()
+function displayHeightUnit(x)
 {
-	if (metric)
+	if (x==true)
 		return "meters";
 	else
 		return "inches";
-}
-
-function displayWeightUnit()
-{
-	if (metric)
-		return "kilograms";
-	else
-		return "pounds";
 }
