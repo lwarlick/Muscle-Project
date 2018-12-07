@@ -121,11 +121,3 @@ function show(id) {
 function hide(id) {
 	document.getElementById(id).style.visibility='hidden';
 }
-
-function displayHeightUnit(x)
-{
-	if (x==true)
-		return "meters";
-	else
-		return "inches";
-}
