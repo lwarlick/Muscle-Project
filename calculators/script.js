@@ -1,3 +1,4 @@
+//publish to heroku/github pages
 metric=false;
 sessionStorage.setItem('metric', metric);
 result=1;
