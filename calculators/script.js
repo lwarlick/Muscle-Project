@@ -13,6 +13,14 @@ function changeSystem(){
 		metric=true;
 	}
 	sessionStorage.setItem('metric', metric);
+	document.getElementById("weightLabel").innerHTML = "Weight lifted" + display1RMLabel() + ":";
+}
+
+function display1RMLabel(){
+	if (sessionStorage.getItem('metric')==='true')
+		return "(kgs)";
+	else
+		return "(lbs)";
 }
 
 function calculate1RM(bool) { //metric:true/false
@@ -115,9 +123,9 @@ function submit1RM() {
 }
 
 function show(id) {
-	document.getElementById(id).style.visibility='visible';
+	document.getElementById(id).style.display='block';
 }
 
 function hide(id) {
-	document.getElementById(id).style.visibility='hidden';
+	document.getElementById(id).style.display='none';
 }

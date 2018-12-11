@@ -20,16 +20,16 @@
 <p id="1RM">
 	<script src="script.js"></script>
 
-	Metric:<br>
+	<div id="metricHeader" class="formlabels">Metric:</div>
 	<label class="switch">
 		<input type="checkbox" onclick="changeSystem();">
 		<span class="slider round"></span>
-	</label>
+	</label> <br><br>
 
 	<form id="1rmform" onsubmit="submit1RM();">
-		Weight lifted:<br>
+		<div id="weightLabel" class="formlabels">Weight lifted(lbs):</div>
 		<input type="text" name="1RMweight" autocomplete="off"><br><br>
-		Repetitions: <br>
+		<div class="formlabels">Repetitions: </div>
 		<input type="text" name="reps" autocomplete="off">
 		<img id="light" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/light-bulb-icon.png">
 		Tip! Input less than 10 reps for most accurate results. <br><br>
@@ -37,8 +37,7 @@
 	</form>
 </p>
 
-<div id="ONERMresult">
-	<script src="script.js"></script>
+<div id="ONERMresult" style="display:none">
 	Your estimated max is:
 	<script>
 		document.write(sessionStorage.getItem('maxresult') + " ");

@@ -168,3 +168,9 @@ input[type=text] {
     margin: 5px 0;
     box-sizing: border-box;
 }
+
+.formlabels {
+  color: #7c0000;
+  font-weight: bolder;
+  font-size: 20px;
+}
