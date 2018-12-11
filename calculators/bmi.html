@@ -19,16 +19,16 @@
 	<p id="BMI">
 		<script src="script.js"></script>
 
-		Metric:<br>
+		<div class="formlabels1">Metric:</div>
 		<label class="switch">
 			<input type="checkbox" onclick="changeSystem();">
-			<span class="slider round"></span>
-		</label>
+			<span class="slider1 round"></span>
+		</label> <br> <br>
 
 		<form id="bmiform" onsubmit="submitBMI();">
-			Weight:<br>
+			<div class="formlabels1" id="bmiLabel">Weight(lbs):</div>
 			<input type="text" name="BMIweight" autocomplete="off"><br><br>
-			Height:<br>
+			<div class="formlabels1"  id="bmiLabel1">Height(in):</div>
 			<input type="text" name="height" autocomplete="off"><br><br>
 			<input type="submit" value="Calculate" id="calc1">
 		</form>
