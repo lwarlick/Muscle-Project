@@ -58,7 +58,6 @@ function calculate1RM(bool) { //metric:true/false
 function calculateBMI(bool) { //metric:true/false
 	bmiweight=document.getElementById("bmiform").elements[0].value;
 	bmiheight=document.getElementById("bmiform").elements[1].value;
-	alert(metric + 'metric' + bmiweight + bmiheight)
 	if (bool==true) //metric bmi
 	{//if not -1 else error
 		return getBMI(bmiheight, bmiweight);
