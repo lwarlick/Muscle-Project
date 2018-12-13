@@ -13,7 +13,6 @@ function changeSystem1RM(){
 	}
 	sessionStorage.setItem('metric', metric);
 	document.getElementById("weightLabel").innerHTML = "Weight lifted" + display1RMLabel() + ":";
-	alert(document.URL)
 }
 
 function changeSystemBMI(){
