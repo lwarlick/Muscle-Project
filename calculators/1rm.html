@@ -27,6 +27,28 @@
 			<span class="slider round"></span>
 		</label> <br><br>
 
+
+  		<div id="form_output"></div>
+
+		<script>
+		$(document).ready(function () {
+			$('#1rmform').on('submit', function(e) {
+				e.preventDefault();
+				$.ajax({
+					url : $(this).attr('action'), //|| window.location.pathname,
+					type: "GET",
+					data: $(this).serialize(),
+					success: function (data) {
+						$("#form_output").html(data);
+					},
+					error: function (jXHR, textStatus, errorThrown) {
+						alert(errorThrown);
+					}
+				});
+			});
+		});
+		</script>
+
 		<form id="1rmform" onsubmit="submit1RM();">
 			<div id="weightLabel" class="formlabels">Weight lifted(lbs):</div>
 			<input type="text" name="1RMweight" autocomplete="off"><br><br>
