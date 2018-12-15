@@ -4,7 +4,7 @@ sessionStorage.setItem('metric', metric);
 result=1;
 maxresult=1;
 
-function changeSystem(){
+function changeSystem1RM(){
 	if (metric==true)
 		metric=false;
 	else
@@ -12,7 +12,17 @@ function changeSystem(){
 		metric=true;
 	}
 	sessionStorage.setItem('metric', metric);
-	document.getElementById("weightlabel").innerHTML = "Weight lifted" + display1RMLabel() + ":";
+	document.getElementById("weightLabel").innerHTML = "Weight lifted" + display1RMLabel() + ":";
+}
+
+function changeSystemBMI(){
+	if (metric==true)
+		metric=false;
+	else
+	{
+		metric=true;
+	}
+	sessionStorage.setItem('metric', metric);
 	document.getElementById("bmiLabel").innerHTML = "Weight" + displayBMILabel() + ":";
 	document.getElementById("bmiLabel1").innerHTML = "Height" + displayBMILabel1() + ":";
 }
@@ -128,13 +138,14 @@ function submit1RM() {
 		x = false;
 
 	if (x==true)
-		unit= "kilograms";
+		unit= "kilograms.";
 	else
-		unit= "pounds";
+		unit= "pounds.";
 
 	maxresult=calculate1RM(x) + " " + unit;
 	sessionStorage.setItem('maxresult', maxresult);
-	show("ONERMresult");
+	//show('ONERMresult');
+	//hide('total1rmcalc');
 }
 
 function show(id) {
