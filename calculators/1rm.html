@@ -9,8 +9,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
 	 crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
 	<title>LIGMA</title>
 	<link href="calculators.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="HomeScreen.css">
@@ -21,59 +19,31 @@
 <body>
 	<span id="open" onclick="openNav()">&equiv;</span>
 	<p id="1RM">
-		<div id='total1rmcalc'>
+		<script src="script.js"></script>
+
 		<div id="metricHeader" class="formlabels">Metric:</div>
-		<div>
 		<label class="switch">
 			<input type="checkbox" onclick="changeSystem1RM();">
 			<span class="slider round"></span>
-		</label> 
-		</div>
-		<br>
+		</label> <br><br>
 
-		<form action="" id="1rmform" method="POST" onsubmit="submit1RM()">
+		<form id="1rmform" onsubmit="submit1RM();">
 			<div id="weightLabel" class="formlabels">Weight lifted(lbs):</div>
-			<input type="text" id="1RMweight" name="weight lifted" value="" autocomplete="off"><br><br>
+			<input type="text" name="1RMweight" autocomplete="off"><br><br>
 			<div class="formlabels">Repetitions: </div>
 			<div style="color:#7c0000; font-weight: bolder">
-				<input type="text" id="reps" name="repetitions" value="" autocomplete="off">
+				<input type="text" name="reps" autocomplete="off">
 				<img id="light" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/light-bulb-icon.png">
 				Tip! Input less than 10 reps for most accurate results.
 			</div><br><br>
-			<input type="submit" value="Calculate" id="calc0" name="calc0">
+			<input type="submit" value="Calculate" id="calc0">
 		</form>
 	</p>
-	</div>
-	<script>
-		$('#calc0').on('click', function () {
-			var valid = true,
-				message = '';
-
-			$('form input').each(function () {
-				var $this = $(this);
-
-				if (!$this.val()) {
-					var inputName = $this.attr('name');
-					valid = false;
-					message += 'Please enter your ' + inputName + '.' + '\n';
-				}
-			});
-
-			if (!valid) {
-				alert(message);
-			}//need to fix 
-		});
-
-		$("form").submit(function( event ) {
-  			event.preventDefault();
-		});
-	</script>
-
 
 	<div id="ONERMresult">
 		<script>
-
-			document.getElementById('calc0').onclick = function() {document.write('Your estimated max is ' + sessionStorage.getItem('maxresult') + " ");}
+			if ('maxresult' in sessionStorage)
+				document.write('Your estimated max is: ' + sessionStorage.getItem('maxresult') + " ");
 		</script>
 	</div>
 

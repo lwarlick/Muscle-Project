@@ -138,14 +138,13 @@ function submit1RM() {
 		x = false;
 
 	if (x==true)
-		unit= "kilograms.";
+		unit= "kilograms";
 	else
-		unit= "pounds.";
+		unit= "pounds";
 
 	maxresult=calculate1RM(x) + " " + unit;
 	sessionStorage.setItem('maxresult', maxresult);
-	//show('ONERMresult');
-	//hide('total1rmcalc');
+	show("ONERMresult");
 }
 
 function show(id) {
